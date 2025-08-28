@@ -1,17 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IntroController : MonoBehaviour
 {
     const string BEGIN_MESSAGE = "Los extraterrestres nos han puesto a prueba y (por desgracia para nuestra raza) eres el encargado de demostrar que merecemos una oportunidad entre los seres inteligentes.\r\n¿Deseas continuar con las pruebas que decidiran el destino de la humanidad?";
 
+    [SerializeField] Toggle showIntro;
     [SerializeField] GameObject beginButtonsParent;
     [SerializeField] GameObject introButtonsParent;
     [SerializeField] TextEffect introText;
     [SerializeField] string[] introParts;
 
     int partCount;
+
+    public bool DoShowIntro => showIntro.isOn;
 
     private void OnEnable()
     {

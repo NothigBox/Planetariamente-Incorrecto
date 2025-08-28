@@ -6,7 +6,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     const float TIME_TO_QUIT_OK = 4.5f;
-    const string SHOW_INTRO = "ShowIntro";
     const string SHOW_COMLPETED_GAME = "ShowCompleted";
 
     [SerializeField] AudioManager audio;
@@ -22,7 +21,6 @@ public class GameManager : MonoBehaviour
         exams = GetComponent<ExamsManager>();
         if (resetSavedExams) 
         {
-            PlayerPrefs.SetInt(SHOW_INTRO, 1);
             PlayerPrefs.SetInt(SHOW_COMLPETED_GAME, 0);
             PlayerPrefs.SetString(exams.SaveExamsName, JsonUtility.ToJson(new ExamResultDataForJSON()));
             PlayerPrefs.SetString(exams.SaveWastedName, JsonUtility.ToJson(new WastedButtonsDataForJSON()));
@@ -49,7 +47,6 @@ public class GameManager : MonoBehaviour
 
     public void SetNewExam() 
     {
-        PlayerPrefs.SetInt(SHOW_INTRO, 0);
         intro.gameObject.SetActive(false);
 
         result.SetScreenState(ScreenState.Gameplay);
@@ -58,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void ContinueIntro()
     {
-        if (PlayerPrefs.GetInt(SHOW_INTRO) == 0)
+        if(intro.DoShowIntro == false)
         {
             SetNewExam();
             return; 
@@ -103,11 +100,6 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(TIME_TO_QUIT_OK);
 
         QuitGame();
-    }
-
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.SetInt(SHOW_INTRO, 1);
     }
 }
 

@@ -6700,6 +6700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80cc7f3d221bceb4a940616d88271059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showIntro: {fileID: 1216498143}
   beginButtonsParent: {fileID: 750481469}
   introButtonsParent: {fileID: 933426462}
   introText: {fileID: 1338172960}
@@ -9259,8 +9260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 242.9, y: -88.3}
-  m_SizeDelta: {x: 104.19, y: 20}
+  m_AnchoredPosition: {x: 242.5, y: -89.1}
+  m_SizeDelta: {x: 95.69, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1216498143
 MonoBehaviour:
@@ -10678,7 +10679,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 95, y: -10}
+  m_AnchoredPosition: {x: 85.7, y: -10}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318989957
@@ -11857,7 +11858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 160, y: -29}
+  m_AnchoredPosition: {x: 160, y: -22.8}
   m_SizeDelta: {x: 402.59, y: 86.95}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1557974017
@@ -11907,8 +11908,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 43
+  m_fontSizeBase: 43
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14787,7 +14788,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Show intro
+  m_text: Ver Intro
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 500bd35fe54e9a149a9154eedd9f8689, type: 2}
   m_sharedMaterial: {fileID: -5965452990860771238, guid: 500bd35fe54e9a149a9154eedd9f8689, type: 2}
@@ -14814,8 +14815,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.1
-  m_fontSizeBase: 14.1
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
